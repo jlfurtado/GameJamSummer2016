@@ -1,11 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IllusionsOfWizardry.CSharp.Plugins", "IllusionsOfWizardry.CSharp.Plugins.csproj", "{6FC88A01-A140-2439-ECAA-3DDA3D0DDBD1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IllusionsOfWizardry.CSharp", "IllusionsOfWizardry.CSharp.csproj", "{36C4B925-668B-BBC6-A570-644135551496}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IllusionsOfWizardry.CSharp.Editor", "IllusionsOfWizardry.CSharp.Editor.csproj", "{1AAD3D72-D50B-DD0A-1D11-483B6B3CC0FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6FC88A01-A140-2439-ECAA-3DDA3D0DDBD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FC88A01-A140-2439-ECAA-3DDA3D0DDBD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FC88A01-A140-2439-ECAA-3DDA3D0DDBD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FC88A01-A140-2439-ECAA-3DDA3D0DDBD1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{36C4B925-668B-BBC6-A570-644135551496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{36C4B925-668B-BBC6-A570-644135551496}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36C4B925-668B-BBC6-A570-644135551496}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36C4B925-668B-BBC6-A570-644135551496}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1AAD3D72-D50B-DD0A-1D11-483B6B3CC0FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1AAD3D72-D50B-DD0A-1D11-483B6B3CC0FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1AAD3D72-D50B-DD0A-1D11-483B6B3CC0FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1AAD3D72-D50B-DD0A-1D11-483B6B3CC0FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
