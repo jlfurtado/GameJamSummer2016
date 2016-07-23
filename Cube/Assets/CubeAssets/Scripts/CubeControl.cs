@@ -8,8 +8,6 @@ public class CubeControl : MonoBehaviour {
     Vector3 m_heading;
     Vector3 m_right;
 
-    [SerializeField]
-    private GameObject m_objWithScoreManager;
 
     Rigidbody m_rigidBody;
     private Transform m_GroundCheck;
@@ -36,7 +34,7 @@ public class CubeControl : MonoBehaviour {
         m_rigidBody = GetComponent<Rigidbody>();
         m_previousPos = transform.position;
         m_right = Vector3.Cross(m_up, m_heading);
-        m_scoreManager = m_objWithScoreManager.GetComponent<ScoreManager>();
+        
         m_GroundCheck = transform.Find("GroundCheck");
     }
 
@@ -44,16 +42,16 @@ public class CubeControl : MonoBehaviour {
     {
         if(other.gameObject.layer == m_WhatIsGround)
         {
-            m_rigidBody.AddForce(-m_heading * m_moveSpeed);
+            //m_rigidBody.AddForce(-m_heading * m_moveSpeed);
             
         }
-       
-        if(other.CompareTag("Collectible"))
-        {
-            Destroy(other.gameObject);
-            m_scoreManager.AddScore(10);
-            //Debug.Log("Score: " + m_score + "\n");
-        }
+
+        //if (other.CompareTag("Collectible"))
+        //{
+        //    Destroy(other.gameObject);
+        //    m_scoreManager.AddScore(10);
+        //    //Debug.Log("Score: " + m_score + "\n");
+        //}
 
     }
 
