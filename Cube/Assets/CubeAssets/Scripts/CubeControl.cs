@@ -19,6 +19,8 @@ public class CubeControl : MonoBehaviour {
     [SerializeField]
     private LayerMask m_WhatIsGround;
 
+    [SerializeField]
+    private int m_score = 0; // score for collecting diamonds for now i guess :) thanks
 
     private int m_colliderListLen = 0;
 
@@ -45,6 +47,8 @@ public class CubeControl : MonoBehaviour {
         if(other.CompareTag("Collectible"))
         {
             Destroy(other.gameObject);
+            m_score++;
+            Debug.Log("Score: " + m_score + "\n");
         }
 
     }
