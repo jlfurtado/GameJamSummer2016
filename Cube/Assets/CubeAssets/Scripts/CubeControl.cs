@@ -51,7 +51,7 @@ public class CubeControl : MonoBehaviour {
         if(other.CompareTag("Collectible"))
         {
             Destroy(other.gameObject);
-            m_scoreManager.AddScore(9001);
+            m_scoreManager.AddScore(10);
             //Debug.Log("Score: " + m_score + "\n");
         }
 
