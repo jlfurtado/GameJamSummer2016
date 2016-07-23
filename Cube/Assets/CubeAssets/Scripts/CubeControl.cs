@@ -7,6 +7,10 @@ public class CubeControl : MonoBehaviour {
     Vector3 m_up;
     Vector3 m_heading;
     Vector3 m_right;
+
+    [SerializeField]
+    private GameObject m_objWithScoreManager;
+
     Rigidbody m_rigidBody;
     private Transform m_GroundCheck;
     [SerializeField] private float m_moveSpeed = 10;
@@ -18,9 +22,8 @@ public class CubeControl : MonoBehaviour {
     private float m_groundDetectRadius = .10f;
     [SerializeField]
     private LayerMask m_WhatIsGround;
-
-    [SerializeField]
-    private int m_score = 0; // score for collecting diamonds for now i guess :) thanks
+    ScoreManager m_scoreManager;
+    
 
     private int m_colliderListLen = 0;
 
@@ -33,6 +36,7 @@ public class CubeControl : MonoBehaviour {
         m_rigidBody = GetComponent<Rigidbody>();
         m_previousPos = transform.position;
         m_right = Vector3.Cross(m_up, m_heading);
+        m_scoreManager = m_objWithScoreManager.GetComponent<ScoreManager>();
         m_GroundCheck = transform.Find("GroundCheck");
     }
 
@@ -47,8 +51,8 @@ public class CubeControl : MonoBehaviour {
         if(other.CompareTag("Collectible"))
         {
             Destroy(other.gameObject);
-            m_score++;
-            Debug.Log("Score: " + m_score + "\n");
+            m_scoreManager.AddScore(9001);
+            //Debug.Log("Score: " + m_score + "\n");
         }
 
     }
@@ -86,10 +90,6 @@ public class CubeControl : MonoBehaviour {
 
     }
 
-    public int GetScore()
-    {
-        return m_score;
-    }
 
     // Update is called once per frame
     void Update () {
