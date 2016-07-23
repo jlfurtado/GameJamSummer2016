@@ -86,6 +86,10 @@ public class CubeControl : MonoBehaviour {
 
     }
 
+    public int GetScore()
+    {
+        return m_score;
+    }
 
     // Update is called once per frame
     void Update () {

@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Assets\CubeAssets\Scripts\CubeControl.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\DiamondSpin.cs" />
+    <Compile Include="Assets\CubeAssets\Scripts\ScoreManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
