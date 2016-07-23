@@ -1,5 +1,5 @@
 # GameJamSummer2016
 
-Hello World!
+This respository contains files pertaining to a Game Jam someplace in the world.
 
-Something In It
+This project is still *incomplete*. Come back later!
