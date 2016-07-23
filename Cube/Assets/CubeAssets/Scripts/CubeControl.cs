@@ -68,10 +68,12 @@ public class CubeControl : MonoBehaviour {
         m_heading =  Quaternion.Euler(0, CrossPlatformInputManager.GetAxis("Horizontal") * m_rotateSpeed * Time.deltaTime, 0) * m_heading;
         m_right = Quaternion.Euler(0, CrossPlatformInputManager.GetAxis("Horizontal") * m_rotateSpeed * Time.deltaTime, 0) * m_right;
 
-        m_rigidBody.AddForce(CrossPlatformInputManager.GetAxis("Vertical") *  m_heading * m_moveSpeed);
+        if (onGround)
+        {
+            m_rigidBody.AddForce(CrossPlatformInputManager.GetAxis("Vertical") * m_heading * m_moveSpeed);
 
-        m_rigidBody.AddForce(CrossPlatformInputManager.GetAxis("Strafe") * m_right * m_moveSpeed);
-
+            m_rigidBody.AddForce(CrossPlatformInputManager.GetAxis("Strafe") * m_right * m_moveSpeed);
+        }
         if (onGround && CrossPlatformInputManager.GetButtonDown("Jump"))
         {
             m_rigidBody.AddForce(m_up * m_jumpSpeed);
