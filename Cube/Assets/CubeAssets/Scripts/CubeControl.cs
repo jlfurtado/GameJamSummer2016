@@ -72,14 +72,23 @@ public class CubeControl : MonoBehaviour {
 
         }
 
-        transform.Rotate(m_up, CrossPlatformInputManager.GetAxis("Mouse X") * m_rotateSpeed * Time.deltaTime);
-        m_heading =  Quaternion.Euler(0, CrossPlatformInputManager.GetAxis("Mouse X") * m_rotateSpeed * Time.deltaTime, 0) * m_heading;
-        m_right = Quaternion.Euler(0, CrossPlatformInputManager.GetAxis("Mouse X") * m_rotateSpeed * Time.deltaTime, 0) * m_right;
+        if (Input.GetMouseButton(0))
+        {
+            transform.Rotate(m_up, CrossPlatformInputManager.GetAxis("Mouse X") * m_rotateSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Rotate(m_up, CrossPlatformInputManager.GetAxis("Horizontal") * m_rotateSpeed * Time.deltaTime);
+
+        }
+
+        // m_heading =  Quaternion.Euler(0, CrossPlatformInputManager.GetAxis("Mouse X") * m_rotateSpeed * Time.deltaTime, 0) * m_heading;
+        // m_right = Quaternion.Euler(0, CrossPlatformInputManager.GetAxis("Mouse X") * m_rotateSpeed * Time.deltaTime, 0) * m_right;
 
         // if (onGround)
         //{
         //m_rigidBody.velocity = new Vector3 (m_rigidBody.velocity.x, m_rigidBody.velocity.y, (CrossPlatformInputManager.GetAxis("Vertical") * m_moveSpeed));
-       Vector3 vel = transform.forward* CrossPlatformInputManager.GetAxis("Vertical") * m_moveSpeed;
+        Vector3 vel = transform.forward* CrossPlatformInputManager.GetAxis("Vertical") * m_moveSpeed;
         vel.y = m_rigidBody.velocity.y;
         m_rigidBody.velocity = vel;
         //}
