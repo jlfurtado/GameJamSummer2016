@@ -10,6 +10,10 @@ public class LevelEnd : MonoBehaviour {
     private string m_nextLevelString = "";
     [SerializeField]
     private float m_totalAnimationTime = 3.0f;
+    [SerializeField]
+    private float m_riseSpeed = 1.0f;
+
+    private GameObject m_cube;
 
 	// Use this for initialization
 	void Start ()
@@ -23,6 +27,7 @@ public class LevelEnd : MonoBehaviour {
 	    if (m_animating)
         {
             m_animationTimer += Time.deltaTime;
+            m_cube.transform.Translate(new Vector3(0.0f, m_riseSpeed * Time.deltaTime, 0.0f));
             if (m_animationTimer > m_totalAnimationTime)
             {
                 LoadNextLevel();
@@ -50,6 +55,7 @@ public class LevelEnd : MonoBehaviour {
         // if colliding with CUBE
         if (other.CompareTag("Player"))
         {
+            m_cube = other.gameObject;
             m_animating = true;
             m_animationTimer = 0.0f;
         }
