@@ -10,8 +10,10 @@ public class CollectibleMultiplier : MonoBehaviour {
     [SerializeField]
     private int m_multiplier;
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private AudioSource m_objWithSound;
+    // Use this for initialization
+    void Start () {
         m_scoreManager = m_objWithScoreManager.GetComponent<ScoreManager>();
 	}
 	
@@ -26,6 +28,7 @@ public class CollectibleMultiplier : MonoBehaviour {
         {
             Destroy(other.gameObject);
             m_scoreManager.AddMultiplier(m_multiplier);
+            m_objWithSound.Play();
             //Debug.Log("Score: " + m_score + "\n");
         }
 
