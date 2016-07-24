@@ -83,6 +83,7 @@
     <Compile Include="Assets\CubeAssets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\DiamondBob.cs" />
     <Compile Include="Assets\LightOnOff.cs" />
+    <Compile Include="Assets\LoadSceneOnButtonPush.cs" />
     <Compile Include="Assets\Refresh.cs" />
   </ItemGroup>
   <ItemGroup>
