@@ -38,7 +38,7 @@ public class ScoreManager : MonoBehaviour {
 
     public void AddMultiplier(int multipler)
     {
-        m_scoreMultiplier = m_scoreMultiplier * multipler;
+        m_scoreMultiplier = m_scoreMultiplier + multipler;
         PlayerPrefs.SetInt("PlayerMult", m_scoreMultiplier);
         m_multText.text = "x" + m_scoreMultiplier;
         
