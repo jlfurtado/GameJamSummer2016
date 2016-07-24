@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/CubeAssets/Scenes/ALevel.unity
+- path: Assets/CubeAssets/Scenes/Title.unity
   isLoaded: 1
   isActive: 1
