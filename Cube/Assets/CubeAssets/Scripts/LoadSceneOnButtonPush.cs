@@ -14,6 +14,9 @@ public class LoadSceneOnButtonPush : MonoBehaviour {
 	void Update () {
 	    if(Input.anyKey)
         {
+            PlayerPrefs.SetInt("PlayerScore", 0);
+            PlayerPrefs.SetInt("PlayerMult", 1);
+
             SceneManager.LoadScene(nextLevel);
         }
 	}

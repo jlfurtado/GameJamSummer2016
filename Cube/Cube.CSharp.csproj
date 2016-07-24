@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -78,13 +72,13 @@
     <Compile Include="Assets\CubeAssets\Scripts\CollectibleMultiplier.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\CollectionHitbox.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\CubeControl.cs" />
+    <Compile Include="Assets\CubeAssets\Scripts\DiamondBob.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\DiamondSpin.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\LevelEnd.cs" />
+    <Compile Include="Assets\CubeAssets\Scripts\LightOnOff.cs" />
+    <Compile Include="Assets\CubeAssets\Scripts\LoadSceneOnButtonPush.cs" />
+    <Compile Include="Assets\CubeAssets\Scripts\Refresh.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\ScoreManager.cs" />
-    <Compile Include="Assets\DiamondBob.cs" />
-    <Compile Include="Assets\LightOnOff.cs" />
-    <Compile Include="Assets\LoadSceneOnButtonPush.cs" />
-    <Compile Include="Assets\Refresh.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
