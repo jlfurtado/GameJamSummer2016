@@ -255,6 +255,7 @@ paket-files/
 [Tt]emp/ 
 [Bb]uild 
 /[Ll]ibrary/ 
+Cube/[Ll]ibrary/ 
 sysinfo.txt 
 *.stackdump 
   
