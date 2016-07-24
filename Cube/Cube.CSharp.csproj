@@ -69,6 +69,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CubeAssets\Scripts\CollectibleMultiplier.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\CollectionHitbox.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\CubeControl.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\DiamondSpin.cs" />
