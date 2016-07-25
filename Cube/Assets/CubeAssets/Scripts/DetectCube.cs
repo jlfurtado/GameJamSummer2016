@@ -10,12 +10,22 @@ public class DetectCube : MonoBehaviour {
     NavMeshAgent m_coneAgent;
     [SerializeField]
     Transform coneTrans;
+    [SerializeField]
+    ConeExpand m_coneExpand;
+
+    bool m_called = false;
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Cube"))
+        if (!m_called)
         {
-            m_coneAi.enabled = true;
-            m_coneAgent.enabled = true;
+            if (other.CompareTag("Cube"))
+            {
+                m_coneAi.enabled = true;
+                m_coneAgent.enabled = true;
+                m_coneExpand.StartExpanding();
+
+                m_called = false;
+            }
         }
     }
 
