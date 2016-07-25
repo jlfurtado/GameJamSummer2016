@@ -27,6 +27,7 @@ public class HighScoreDisplayer : MonoBehaviour
             curRank = 1;
 
         }
+
             while (exists && curRank < sizeOfArray) 
         {
             
@@ -40,7 +41,17 @@ public class HighScoreDisplayer : MonoBehaviour
                 exists = false;
             }
             curRank++;
-        } 
+        }
+
+
+        while (curRank < sizeOfArray)
+        {
+
+            PlayerPrefs.SetInt("HighScore" + curRank, 0);
+
+            curRank++;
+        }
+     
 
     }
 
