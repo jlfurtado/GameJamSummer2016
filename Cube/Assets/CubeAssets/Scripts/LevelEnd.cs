@@ -3,7 +3,15 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class LevelEnd : MonoBehaviour {
-
+    [SerializeField]
+    ScoreManager m_scoreManager;
+    [SerializeField]
+    Timer m_timer;
+    [SerializeField]
+    bool m_isGoal = true;
+    [SerializeField]
+    private int m_pointsPerSecond = 2;
+    
     private float m_animationTimer = 0.0f;
     private bool m_animating = false;
     [SerializeField]
@@ -58,6 +66,12 @@ public class LevelEnd : MonoBehaviour {
             m_cube = other.gameObject;
             m_animating = true;
             m_animationTimer = 0.0f;
+
+            if (m_isGoal)
+            {
+                m_scoreManager.AddScore(m_timer.GetSecondsRemaining() * m_pointsPerSecond * m_scoreManager.GetMultiplier());
+            }
+
         }
     }
 }

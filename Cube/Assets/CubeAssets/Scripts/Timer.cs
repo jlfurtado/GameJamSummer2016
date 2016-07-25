@@ -17,6 +17,11 @@ public class Timer : MonoBehaviour {
         m_secondsRemaining = m_totalSeconds;
 	}
 	
+    public int GetSecondsRemaining()
+    {
+        return m_secondsRemaining;
+    }
+
 	// Update is called once per frame
 	void Update () {
         m_secondTimer += Time.deltaTime;

@@ -3,8 +3,6 @@ using System.Collections;
 using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour {
 
-
-    private int m_multiplier = 1;
     CubeControl m_cc; // CubeControl var
     Text  m_text; // score
     [SerializeField]
@@ -22,11 +20,12 @@ public class ScoreManager : MonoBehaviour {
         m_multText.text = "x" + m_scoreMultiplier;
         m_text.text = m_score.ToString();
 
-
-      
     }
 
-    
+    public int GetMultiplier()
+    {
+        return m_scoreMultiplier;
+    }
 	
     public void AddScore(int score)
     {
