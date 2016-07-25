@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ConeBumper : MonoBehaviour {
 
-    [SerializeField] CubeControl m_cube;
+    [SerializeField] Rigidbody m_cone;
     [SerializeField] float m_force = 1000.0f;
 	// Use this for initialization
 	void Start () {
@@ -12,11 +12,11 @@ public class ConeBumper : MonoBehaviour {
 	
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Cube"))
+        if(other.CompareTag("Cone"))
         {
-            m_cube.Bump(transform.forward, m_force*10);
+            m_cone.AddForce(transform.forward* m_force* 1.3f, ForceMode.Acceleration);
 
-            GetComponent<Rigidbody>().AddForce(-transform.forward * m_force * .4f, ForceMode.Acceleration);
+            GetComponent<Rigidbody>().AddForce(-transform.forward * m_force * .5f, ForceMode.VelocityChange);
         }
     }
 
