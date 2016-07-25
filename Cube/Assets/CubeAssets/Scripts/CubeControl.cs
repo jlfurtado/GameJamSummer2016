@@ -89,7 +89,7 @@ public class CubeControl : MonoBehaviour {
         Vector3 vel = transform.forward* CrossPlatformInputManager.GetAxis("Vertical") * m_moveSpeed;
         Vector3 strafe = transform.right * CrossPlatformInputManager.GetAxis("Strafe") * m_moveSpeed;
         vel.y = m_rigidBody.velocity.y;
-        strafe.y = m_rigidBody.velocity.y;
+        strafe.y = 0;
         m_rigidBody.velocity = vel + strafe;
         //}
         if (onGround && CrossPlatformInputManager.GetButton("Jump"))
