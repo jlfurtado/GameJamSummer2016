@@ -40,11 +40,11 @@ public class CubeControl : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == m_WhatIsGround)
-        {
-            //m_rigidBody.AddForce(-m_heading * m_moveSpeed);
-            
-        }
+        // if(other.gameObject.layer == m_WhatIsGround)
+        // {
+        //     //m_rigidBody.AddForce(-m_heading * m_moveSpeed);
+        //     
+        // }
 
         //if (other.CompareTag("Collectible"))
         //{
@@ -79,11 +79,6 @@ public class CubeControl : MonoBehaviour {
         {
             transform.Rotate(m_up, CrossPlatformInputManager.GetAxis("Mouse X") * m_rotateSpeed * Time.deltaTime);
         }
-        else
-        {
-            transform.Rotate(m_up, CrossPlatformInputManager.GetAxis("Horizontal") * m_rotateSpeed * Time.deltaTime);
-
-        }
 
         // m_heading =  Quaternion.Euler(0, CrossPlatformInputManager.GetAxis("Mouse X") * m_rotateSpeed * Time.deltaTime, 0) * m_heading;
         // m_right = Quaternion.Euler(0, CrossPlatformInputManager.GetAxis("Mouse X") * m_rotateSpeed * Time.deltaTime, 0) * m_right;
@@ -92,8 +87,10 @@ public class CubeControl : MonoBehaviour {
         //{
         //m_rigidBody.velocity = new Vector3 (m_rigidBody.velocity.x, m_rigidBody.velocity.y, (CrossPlatformInputManager.GetAxis("Vertical") * m_moveSpeed));
         Vector3 vel = transform.forward* CrossPlatformInputManager.GetAxis("Vertical") * m_moveSpeed;
+        Vector3 strafe = transform.right * CrossPlatformInputManager.GetAxis("Strafe") * m_moveSpeed;
         vel.y = m_rigidBody.velocity.y;
-        m_rigidBody.velocity = vel;
+        strafe.y = m_rigidBody.velocity.y;
+        m_rigidBody.velocity = vel + strafe;
         //}
         if (onGround && CrossPlatformInputManager.GetButton("Jump"))
         {
