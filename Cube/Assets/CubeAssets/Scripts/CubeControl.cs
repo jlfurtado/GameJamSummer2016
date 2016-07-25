@@ -55,6 +55,11 @@ public class CubeControl : MonoBehaviour {
 
     }
 
+    public void Bump(Vector3 dir, float force)
+    {
+        m_rigidBody.AddForce(dir * force);
+    }
+
     void FixedUpdate()
     {
         onGround = false;
