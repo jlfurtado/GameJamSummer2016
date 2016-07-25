@@ -87,7 +87,7 @@ public class CubeControl : MonoBehaviour {
         //{
         //m_rigidBody.velocity = new Vector3 (m_rigidBody.velocity.x, m_rigidBody.velocity.y, (CrossPlatformInputManager.GetAxis("Vertical") * m_moveSpeed));
         Vector3 vel = transform.forward* CrossPlatformInputManager.GetAxis("Vertical") * m_moveSpeed;
-        Vector3 strafe = transform.right * CrossPlatformInputManager.GetAxis("Strafe") * m_moveSpeed;
+        Vector3 strafe = transform.right * CrossPlatformInputManager.GetAxis("Strafe") * m_moveSpeed * .50f;
         vel.y = m_rigidBody.velocity.y;
         strafe.y = 0;
         m_rigidBody.velocity = vel + strafe;

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/CubeAssets/Scenes/LevelRed.unity
+- path: Assets/CubeAssets/Scenes/Win.unity
   isLoaded: 1
   isActive: 1
