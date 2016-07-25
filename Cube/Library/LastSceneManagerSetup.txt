@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/CubeAssets/Scenes/LevelBlue.unity
+- path: Assets/CubeAssets/Scenes/LevelOrange.unity
   isLoaded: 1
   isActive: 1
