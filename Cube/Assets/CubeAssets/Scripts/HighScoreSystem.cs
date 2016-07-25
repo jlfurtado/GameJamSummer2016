@@ -5,14 +5,14 @@ public class HighScoreSystem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        int curRank = 0;
+        int curRank = 1;
         int tempScore = PlayerPrefs.GetInt("PlayerScore");
         int tempScore2;
         bool exists = false;
 
         while (!exists && curRank < 10)
         {
-            curRank++;
+           
             Debug.Log("Loop " + curRank);
            
             if (PlayerPrefs.HasKey("HighScore" + curRank))
@@ -35,6 +35,7 @@ public class HighScoreSystem : MonoBehaviour {
                 PlayerPrefs.SetInt("HighScore" + curRank, PlayerPrefs.GetInt("PlayerScore"));
                 exists = true;
             }
+            curRank++;
         }
     }
 	
