@@ -87,7 +87,9 @@
     <Compile Include="Assets\CubeAssets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\Timer.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\TurnUpright.cs" />
+    <Compile Include="Assets\DetectCube.cs" />
     <Compile Include="Assets\DisableConeAI.cs" />
+    <Compile Include="Assets\WhoWon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
