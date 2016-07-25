@@ -3,9 +3,6 @@ using System.Collections;
 
 public class HighScoreSystem : MonoBehaviour {
 
-
-
-
 	// Use this for initialization
 	void Start () {
         int curRank = 0;
@@ -38,11 +35,7 @@ public class HighScoreSystem : MonoBehaviour {
                 PlayerPrefs.SetInt("HighScore" + curRank, PlayerPrefs.GetInt("PlayerScore"));
                 exists = true;
             }
-
-
         }
-
-        
     }
 	
 }

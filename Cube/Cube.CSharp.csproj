@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -75,12 +69,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ConeBumper.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\CollectibleMultiplier.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\CollectionHitbox.cs" />
+    <Compile Include="Assets\CubeAssets\Scripts\ConeBumper.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\CubeControl.cs" />
+    <Compile Include="Assets\CubeAssets\Scripts\DetectCube.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\DiamondBob.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\DiamondSpin.cs" />
+    <Compile Include="Assets\CubeAssets\Scripts\DisableConeAI.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\HighScoreDisplayer.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\HighScoreSystem.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\LevelEnd.cs" />
@@ -93,9 +89,7 @@
     <Compile Include="Assets\CubeAssets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\Timer.cs" />
     <Compile Include="Assets\CubeAssets\Scripts\TurnUpright.cs" />
-    <Compile Include="Assets\DetectCube.cs" />
-    <Compile Include="Assets\DisableConeAI.cs" />
-    <Compile Include="Assets\WhoWon.cs" />
+    <Compile Include="Assets\CubeAssets\Scripts\WhoWon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />

@@ -11,7 +11,7 @@ public class LevelEnd : MonoBehaviour {
     bool m_isGoal = true;
     [SerializeField]
     private int m_pointsPerSecond = 2;
-    
+
     private float m_animationTimer = 0.0f;
     private bool m_animating = false;
     [SerializeField]
@@ -71,7 +71,7 @@ public class LevelEnd : MonoBehaviour {
             {
                 m_scoreManager.AddScore(m_timer.GetSecondsRemaining() * m_pointsPerSecond * m_scoreManager.GetMultiplier());
             }
-
+           
         }
     }
 }
