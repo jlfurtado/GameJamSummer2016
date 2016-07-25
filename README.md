@@ -26,6 +26,5 @@ Of course, there's bugs. I wonder how they got in. I thought this game only comp
   * Kyle St. Amant
   * Justin Furtado
   * Wesley Sheng
-  * 
   
 Made in Unity Personal Edition.
